@@ -1,0 +1,35 @@
+---
+import type { createDashboardModel } from "../domain/view-model";
+import MonthSelector from "./MonthSelector.astro";
+import MonthlySummary from "./MonthlySummary.astro";
+import ChangeBridge from "./ChangeBridge.astro";
+import CauseRanking from "./CauseRanking.astro";
+import ComparableProducts from "./ComparableProducts.astro";
+import PresenceChanges from "./PresenceChanges.astro";
+import SubstitutionInferences from "./SubstitutionInferences.astro";
+import SpendingHistory from "./SpendingHistory.astro";
+import ProductPriceHistory from "./ProductPriceHistory.astro";
+type Model = ReturnType<typeof createDashboardModel>;
+interface Props { model: Model }
+const { model } = Astro.props;
+---
+<header class="site-header">
+  <div class="brand"><span aria-hidden="true">↗</span><div><h1 class="brand-title">Compras mensuales</h1><small>Historial del supermercado</small></div></div>
+  <MonthSelector months={model.months} selected={model.selected.month} />
+</header>
+<main id="contenido">
+  <MonthlySummary model={model} />
+  <p class="discount-notice"><span aria-hidden="true">✓</span> Todos los valores consideran los descuentos del ticket.</p>
+  {model.comparison ? (
+    <>
+      <div class="analysis-grid"><ChangeBridge comparison={model.comparison} /><CauseRanking comparison={model.comparison} /></div>
+      <PresenceChanges comparison={model.comparison} />
+      <ComparableProducts comparison={model.comparison} />
+    </>
+  ) : <section class="panel empty-state"><h2>Primer mes del historial</h2><p>Todavía no hay un mes anterior disponible para comparar.</p></section>}
+  <SubstitutionInferences substitutions={model.selectedSource.substitutions} />
+  <SpendingHistory history={model.history} selected={model.selected.month} />
+  <ProductPriceHistory histories={model.priceHistories} />
+</main>
+<footer><p>Importes netos del ticket · MEP vendedor de fin de jornada según ArgentinaDatos, no cierre bursátil oficial.</p></footer>
+<style>.brand-title{font-size:1rem;margin:0}</style>

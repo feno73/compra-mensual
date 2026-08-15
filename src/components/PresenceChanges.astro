@@ -1,0 +1,18 @@
+---
+import { formatArs } from "../domain/money";
+import type { compareAggregates } from "../domain/comparison/compare";
+type Comparison = ReturnType<typeof compareAggregates>;
+interface Props { comparison: Comparison }
+const { comparison } = Astro.props;
+const byValue = (items: Comparison["newProducts"]) => [...items].sort((a, b) => Number(b.netCents - a.netCents));
+---
+<div class="split-panels">
+  <section class="panel compact" aria-labelledby="nuevos-titulo">
+    <p class="eyebrow">Aparecen este mes</p><h2 id="nuevos-titulo">Productos nuevos</h2>
+    <ul class="product-list">{byValue(comparison.newProducts).map((product) => <li><span><strong>{product.name}</strong><small>{product.category}</small></span><b>{formatArs(product.netCents)}</b></li>)}</ul>
+  </section>
+  <section class="panel compact" aria-labelledby="ausentes-titulo">
+    <p class="eyebrow">No están en el mes elegido</p><h2 id="ausentes-titulo">Productos ausentes</h2>
+    <ul class="product-list">{byValue(comparison.absentProducts).map((product) => <li><span><strong>{product.name}</strong><small>No aparece en este mes</small></span><b>{formatArs(product.netCents)}</b></li>)}</ul>
+  </section>
+</div>

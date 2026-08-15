@@ -1,0 +1,11 @@
+---
+import type { PurchaseMonth } from "../domain/purchases/types";
+interface Props { substitutions: PurchaseMonth["substitutions"] }
+const { substitutions } = Astro.props;
+---
+<section class="panel compact" aria-labelledby="sustituciones-titulo">
+  <p class="eyebrow">Separadas de la contabilidad</p><h2 id="sustituciones-titulo">Posibles sustituciones</h2>
+  {substitutions.length === 0 ? <p class="empty-state">No se registraron sustituciones inferidas para este mes.</p> : (
+    <ul>{substitutions.map((item) => <li><strong>{item.previousProductId}</strong> → <strong>{item.currentProductId}</strong>: {item.reason} ({item.confidence})</li>)}</ul>
+  )}
+</section>

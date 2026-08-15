@@ -1,0 +1,21 @@
+---
+import { formatArs, formatUsd } from "../domain/money";
+import type { buildSpendingHistory } from "../domain/history";
+type History = ReturnType<typeof buildSpendingHistory>;
+interface Props { history: History; selected: string }
+const { history, selected } = Astro.props;
+const max = history.reduce((value, point) => point.arsCents > value ? point.arsCents : value, 1n);
+---
+<section class="panel" aria-labelledby="historial-titulo">
+  <p class="eyebrow">Pesos y poder de compra</p><h2 id="historial-titulo">Evolución histórica</h2>
+  <div class="history-chart" role="img" aria-label="Barras del gasto mensual en pesos">
+    {history.map((point) => (
+      <div class:list={["history-column", { selected: point.month === selected }]}>
+        <span class="history-value">{formatArs(point.arsCents)}</span>
+        <div class="history-bar"><span style={`height:${Number(point.arsCents * 100n / max)}%`}></span></div>
+        <strong>{point.month}</strong><small>{formatUsd(point.usdCents)}</small>
+      </div>
+    ))}
+  </div>
+  <div class="table-scroll" tabindex="0" aria-label="Tabla desplazable del historial mensual"><table><thead><tr><th>Mes</th><th>Total ARS</th><th>Equivalente MEP</th></tr></thead><tbody>{history.map((point) => <tr><th scope="row">{point.month}</th><td>{formatArs(point.arsCents)}</td><td>{formatUsd(point.usdCents)}</td></tr>)}</tbody></table></div>
+</section>

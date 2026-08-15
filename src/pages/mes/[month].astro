@@ -1,0 +1,16 @@
+---
+import Dashboard from "../../components/Dashboard.astro";
+import { createDashboardModel } from "../../domain/view-model";
+import { loadPurchaseMonths } from "../../domain/purchases/load";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const months = await loadPurchaseMonths();
+  return months.map((month) => ({ params: { month: month.month }, props: { selectedMonth: month.month } }));
+}
+interface Props { selectedMonth: string }
+const { selectedMonth } = Astro.props;
+const months = await loadPurchaseMonths();
+const model = createDashboardModel(months, selectedMonth);
+---
+<BaseLayout title={`${selectedMonth} · Compras mensuales`} description={`Detalle y comparación de compras de ${selectedMonth}`}><Dashboard model={model} /></BaseLayout>

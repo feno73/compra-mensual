@@ -1,0 +1,21 @@
+---
+import { formatArs } from "../domain/money";
+import type { compareAggregates } from "../domain/comparison/compare";
+type Comparison = ReturnType<typeof compareAggregates>;
+interface Props { comparison: Comparison }
+const { comparison } = Astro.props;
+const causes = [
+  { label: "Productos nuevos", value: comparison.factors.newProductsCents },
+  { label: "Productos ausentes", value: comparison.factors.absentProductsCents },
+  { label: "Cantidades", value: comparison.factors.quantityCents },
+  { label: "Precios", value: comparison.factors.priceCents },
+  { label: "Promociones", value: comparison.factors.discountCents },
+].sort((a, b) => Number((b.value < 0n ? -b.value : b.value) - (a.value < 0n ? -a.value : a.value)));
+---
+<section class="panel compact" aria-labelledby="causas-titulo">
+  <p class="eyebrow">Ordenadas por impacto</p>
+  <h2 id="causas-titulo">Principales causas</h2>
+  <ol class="cause-list">
+    {causes.map((cause) => <li><span>{cause.label}</span><strong>{formatArs(cause.value)}</strong></li>)}
+  </ol>
+</section>
