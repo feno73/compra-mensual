@@ -1,0 +1,31 @@
+{
+  "name": "compra-mensual",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check && tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "import:coto": "tsx scripts/import-coto-ticket.ts",
+    "validate": "tsx scripts/validate-data.ts",
+    "build": "pnpm validate && astro build"
+  },
+  "dependencies": {
+    "astro": "^5.13.5",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^26.2.0",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
