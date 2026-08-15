@@ -5,7 +5,7 @@ const skillPath = ".agents/skills/update-monthly-purchases/SKILL.md";
 
 test("el skill se descubre al incorporar, analizar o comparar tickets mensuales", async () => {
   const skill = await readFile(skillPath, "utf8");
-  expect(skill).toMatch(/^---\nname: update-monthly-purchases\ndescription: Use when .*incorporar.*analizar.*comparar.*ticket.*supermercado/im);
+  expect(skill).toMatch(/^---\r?\nname: update-monthly-purchases\r?\ndescription: Use when .*incorporar.*analizar.*comparar.*ticket.*supermercado/im);
 });
 
 test("el skill cubre el flujo mensual completo y bloquea ambigüedades", async () => {
