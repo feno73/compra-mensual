@@ -1,0 +1,38 @@
+---
+import { formatArs, formatPercent, formatUsd } from "../domain/money";
+import type { createDashboardModel } from "../domain/view-model";
+
+type Model = ReturnType<typeof createDashboardModel>;
+interface Props { model: Model }
+const { model } = Astro.props;
+const comparison = model.comparison;
+const rates = model.selected.rates;
+const monthLabel = new Intl.DateTimeFormat("es-AR", { month: "long", year: "numeric", timeZone: "UTC" })
+  .format(new Date(`${model.selected.month}-01T00:00:00Z`));
+---
+<section class="hero" aria-labelledby="resumen-mensual">
+  <div>
+    <p class="eyebrow">Resumen de {monthLabel}</p>
+    <h2 id="resumen-mensual">Tu compra, en contexto</h2>
+    <p class="hero-copy">Una lectura clara de cuánto pagaste y qué cambió en tu carrito.</p>
+  </div>
+  <div class="summary-grid">
+    <article class="metric metric-primary" aria-label="Total pagado">
+      <span>Total pagado</span>
+      <strong>{formatArs(model.selected.totalCents)}</strong>
+      <small>Importe neto final</small>
+    </article>
+    <article class="metric" aria-label="Equivalente MEP">
+      <span>Equivalente MEP</span>
+      <strong>{formatUsd(model.selected.usdCents)}</strong>
+      <small>{rates.length === 1 ? `$ ${formatArs(rates[0]!.rateCentsPerUsd).replace("$ ", "")} por USD · ${rates[0]!.date}` : `${rates.length} cotizaciones aplicadas`}</small>
+    </article>
+    <article class="metric" aria-label="Cambio frente al mes anterior">
+      <span>Frente al mes anterior</span>
+      <strong class:list={{ positive: comparison && comparison.totalChangeCents > 0n, negative: comparison && comparison.totalChangeCents < 0n }}>
+        {comparison ? formatArs(comparison.totalChangeCents) : "Sin comparación"}
+      </strong>
+      <small>{comparison ? formatPercent(comparison.totalChangeCents, comparison.previousTotalCents) : "Primer mes del historial"}</small>
+    </article>
+  </div>
+</section>

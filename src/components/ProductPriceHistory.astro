@@ -1,0 +1,18 @@
+---
+import { formatArs } from "../domain/money";
+import type { buildProductPriceHistory } from "../domain/history";
+type Histories = ReturnType<typeof buildProductPriceHistory>;
+interface Props { histories: Histories }
+const { histories } = Astro.props;
+---
+<section class="panel" aria-labelledby="precios-titulo">
+  <p class="eyebrow">Productos presentes en más de un mes</p><h2 id="precios-titulo">Historial de precios habituales</h2>
+  <div class="price-history-grid">
+    {histories.map((history) => (
+      <article class="price-card">
+        <h3>{history.name}</h3><small>Precio por {history.unit === "unit" ? "unidad" : history.unit}</small>
+        <dl>{history.points.map((point) => <div><dt>{point.month}</dt><dd><strong>{formatArs(point.netUnitCents)}</strong><small>Lista {formatArs(point.grossUnitCents)}</small></dd></div>)}</dl>
+      </article>
+    ))}
+  </div>
+</section>

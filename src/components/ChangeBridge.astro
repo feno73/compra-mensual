@@ -1,0 +1,33 @@
+---
+import { formatArs } from "../domain/money";
+import type { compareAggregates } from "../domain/comparison/compare";
+
+type Comparison = ReturnType<typeof compareAggregates>;
+interface Props { comparison: Comparison }
+const { comparison } = Astro.props;
+const rows = [
+  ["Productos nuevos", comparison.factors.newProductsCents, "Lo que apareció este mes"],
+  ["Productos ausentes", comparison.factors.absentProductsCents, "Lo que dejó de estar en el carrito"],
+  ["Cambio de cantidad", comparison.factors.quantityCents, "Más o menos unidades del mismo producto"],
+  ["Cambio de precio", comparison.factors.priceCents, "Variación del precio de lista"],
+  ["Promociones", comparison.factors.discountCents, "Diferencia de descuentos en productos comparables"],
+  ["Ajustes", comparison.factors.adjustmentsCents, "Redondeos generales del ticket"],
+] as const;
+const maximum = rows.reduce((max, [, value]) => (value < 0n ? -value : value) > max ? (value < 0n ? -value : value) : max, 1n);
+---
+<section class="panel" aria-labelledby="puente-titulo">
+  <div class="section-heading">
+    <div><p class="eyebrow">Reconciliación exacta</p><h2 id="puente-titulo">¿De dónde salió la diferencia?</h2></div>
+    <strong>{formatArs(comparison.totalChangeCents)}</strong>
+  </div>
+  <div class="bridge" role="list">
+    {rows.map(([label, value, detail]) => (
+      <div class="bridge-row" role="listitem">
+        <div class="bridge-label"><strong>{label}</strong><small>{detail}</small></div>
+        <div class="bridge-track" aria-hidden="true"><span class:list={{ down: value < 0n }} style={`width:${Number((value < 0n ? -value : value) * 100n / maximum)}%`}></span></div>
+        <strong class:list={{ positive: value > 0n, negative: value < 0n }}>{formatArs(value)}</strong>
+      </div>
+    ))}
+  </div>
+  <p class="reconciliation-note">Los seis factores suman exactamente {formatArs(comparison.reconciledCents)}.</p>
+</section>

@@ -1,0 +1,19 @@
+---
+interface Props { months: string[]; selected: string }
+const { months, selected } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const label = (month: string) => {
+  const [year, number] = month.split("-").map(Number);
+  return new Intl.DateTimeFormat("es-AR", { month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(Date.UTC(year!, number! - 1, 1)));
+};
+---
+<nav class="month-nav" aria-label="Seleccionar mes">
+  <span>Ver período</span>
+  <div class="month-links">
+    {months.map((month) => (
+      <a href={`${base}/mes/${month}/`} aria-current={month === selected ? "page" : undefined}>
+        {label(month)}
+      </a>
+    ))}
+  </div>
+</nav>

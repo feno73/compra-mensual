@@ -1,0 +1,27 @@
+---
+import { divideRounded, formatArs } from "../domain/money";
+import type { compareAggregates } from "../domain/comparison/compare";
+type Comparison = ReturnType<typeof compareAggregates>;
+interface Props { comparison: Comparison }
+const { comparison } = Astro.props;
+const unitNet = (product: Comparison["comparable"][number]["current"]) => divideRounded(product.netCents * 10n ** BigInt(product.quantityScale), product.quantity);
+---
+<section class="panel" aria-labelledby="comparables-titulo">
+  <div class="section-heading"><div><p class="eyebrow">Mismo código, comparación exacta</p><h2 id="comparables-titulo">Productos comparables</h2></div><span class="count">{comparison.comparable.length}</span></div>
+  <div class="table-scroll" tabindex="0" aria-label="Tabla desplazable de productos comparables">
+    <table>
+      <thead><tr><th>Producto</th><th>Antes, neto/u.</th><th>Ahora, neto/u.</th><th>Cambio total</th><th>Explicación</th></tr></thead>
+      <tbody>
+        {comparison.comparable.map((item) => (
+          <tr>
+            <th scope="row"><span>{item.product.name}</span><small>{item.product.category}</small></th>
+            <td>{formatArs(unitNet(item.previous))}</td>
+            <td>{formatArs(unitNet(item.current))}</td>
+            <td class:list={{ positive: item.changeCents > 0n, negative: item.changeCents < 0n }}>{formatArs(item.changeCents)}</td>
+            <td><small>Cantidad {formatArs(item.quantityCents)} · Precio {formatArs(item.priceCents)} · Descuento {formatArs(item.discountCents)}</small></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
