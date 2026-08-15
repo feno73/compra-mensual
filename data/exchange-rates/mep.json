@@ -1,0 +1,21 @@
+{
+  "source": "ArgentinaDatos",
+  "sourceField": "venta",
+  "description": "MEP vendedor al cierre de la jornada según ArgentinaDatos",
+  "rates": [
+    {
+      "nominalDate": "2026-07-10",
+      "effectiveDate": "2026-07-10",
+      "rateCentsPerUsd": 153270,
+      "sourceReference": "0988b5e0ac22f58f8b2044a7adb4d288a90c4009",
+      "fetchedAt": "2026-08-15"
+    },
+    {
+      "nominalDate": "2026-08-14",
+      "effectiveDate": "2026-08-14",
+      "rateCentsPerUsd": 152160,
+      "sourceReference": "3f904bca88253d0f8c760d8a7b91eb56cffbafff",
+      "fetchedAt": "2026-08-15"
+    }
+  ]
+}
