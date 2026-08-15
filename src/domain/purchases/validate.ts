@@ -20,6 +20,31 @@ export function validatePurchaseHistory(months: PurchaseMonth[]): string[] {
       if (paid !== ticket.totals.paidCents) issues.push(`El total pagado no reconcilia en ${month.month}`);
       if (ticket.exchangeRate.effectiveDate > ticket.exchangeRate.nominalDate) issues.push(`La cotización MEP de ${month.month} es posterior a la compra`);
     }
+
+    const previousMonth = months
+      .filter((candidate) => candidate.month < month.month)
+      .sort((left, right) => left.month.localeCompare(right.month))
+      .at(-1);
+    if (month.substitutions.length === 0 || !previousMonth) continue;
+
+    const previousIds = new Set(previousMonth.tickets.flatMap((ticket) => ticket.lines.map((line) => line.product.id)));
+    const currentIds = new Set(month.tickets.flatMap((ticket) => ticket.lines.map((line) => line.product.id)));
+    const usedIds = new Set<string>();
+
+    for (const substitution of month.substitutions) {
+      for (const id of substitution.previousProductIds) {
+        if (!previousIds.has(id)) issues.push(`${id} no existe en el mes anterior para ${substitution.id}`);
+        if (currentIds.has(id)) issues.push(`${id} no es un producto ausente en ${substitution.id}`);
+        if (usedIds.has(id)) issues.push(`${id} participa en más de una sustitución`);
+        usedIds.add(id);
+      }
+      for (const id of substitution.currentProductIds) {
+        if (!currentIds.has(id)) issues.push(`${id} no existe en el mes actual para ${substitution.id}`);
+        if (previousIds.has(id)) issues.push(`${id} no es un producto nuevo en ${substitution.id}`);
+        if (usedIds.has(id)) issues.push(`${id} participa en más de una sustitución`);
+        usedIds.add(id);
+      }
+    }
   }
 
   return issues;

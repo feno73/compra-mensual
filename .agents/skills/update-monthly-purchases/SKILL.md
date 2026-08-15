@@ -19,7 +19,7 @@ El ticket es la evidencia: no inventar nombres, cantidades, precios, descuentos 
 6. Obtener el dólar MEP vendedor de fin de jornada desde un snapshot versionado de ArgentinaDatos. Si no existe la fecha, usar el registro anterior más reciente y guardar ambas fechas.
 7. Generar `data/purchases/YYYY-MM.json` en centavos enteros. Para HTML Coto verificable, usar `pnpm import:coto -- <entrada> <salida> <mep-centavos> <commit-fuente>`.
 8. Ejecutar `pnpm validate`: la suma de cada línea, descuentos y ajustes debe coincidir con el total. Solo se admite un centavo si queda como ajuste explícito.
-9. Comparar contra el mes anterior y todo el historial disponible; separar coincidencias exactas de sustituciones inferidas y comprobar reconciliación exacta.
+9. Comparar contra el mes anterior y todo el historial disponible; después del matching exacto, enumerar productos nuevos y ausentes y buscar equivalencias estrictas por función, formato y cantidad. Registrar las evidentes con fundamento y preguntar al usuario por toda sustitución dudosa antes de continuar. Guardar solo reemplazos confirmados y recalcular nuevos, ausentes, reemplazos y la reconciliación exacta.
 10. Actualizar únicamente el JSON mensual, la cotización versionada y otros archivos derivados realmente necesarios. Una corrección histórica debe ser explícita.
 11. Ejecutar las pruebas y validaciones con `pnpm check`, `pnpm test`, `pnpm build` y `pnpm test:e2e`; revisar visualmente la aplicación en escritorio y móvil.
 12. Entregar un resumen de cambios, totales, MEP, comparación, validaciones y cualquier dato ambiguo.
@@ -41,6 +41,7 @@ Señalar la línea exacta y solicitar confirmación. No crear ni modificar el JS
 ## Errores comunes
 
 - No asociar productos solo por nombre o categoría.
+- No tratar una categoría compartida como evidencia suficiente de reemplazo.
 - No atribuir un ajuste general a una línea arbitraria.
 - No llamar “cierre oficial” a la cotización de ArgentinaDatos.
 - No afirmar “nunca lo comprás” con historial insuficiente.

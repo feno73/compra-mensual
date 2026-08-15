@@ -8,6 +8,7 @@ const { comparison } = Astro.props;
 const rows = [
   ["Productos nuevos", comparison.factors.newProductsCents, "Lo que apareció este mes"],
   ["Productos ausentes", comparison.factors.absentProductsCents, "Lo que dejó de estar en el carrito"],
+  ["Reemplazos", comparison.factors.substitutionsCents, "Cambio neto de alternativas confirmadas"],
   ["Cambio de cantidad", comparison.factors.quantityCents, "Más o menos unidades del mismo producto"],
   ["Cambio de precio", comparison.factors.priceCents, "Variación del precio de lista"],
   ["Promociones", comparison.factors.discountCents, "Diferencia de descuentos en productos comparables"],

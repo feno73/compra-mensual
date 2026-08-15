@@ -1779,5 +1779,105 @@
       }
     }
   ],
-  "substitutions": []
+  "substitutions": [
+    {
+      "id": "leche-proteica",
+      "previousProductIds": ["gtin:07790742358608"],
+      "currentProductIds": ["gtin:07798338291803"],
+      "kind": "equivalent",
+      "reason": "Cambio confirmado de marca de leche descremada con proteína",
+      "comparisonBasis": "6 unidades de 1 litro en ambos meses",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "tomate-en-lata",
+      "previousProductIds": ["gtin:07790580567903"],
+      "currentProductIds": ["gtin:07798132920848"],
+      "kind": "equivalent",
+      "reason": "Cambio confirmado de marca de tomate en lata",
+      "comparisonBasis": "4 latas de 400 gramos en ambos meses",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "arroz-un-kilo",
+      "previousProductIds": ["gtin:07791120021558"],
+      "currentProductIds": ["gtin:07790503199082"],
+      "kind": "equivalent",
+      "reason": "Cambio confirmado de marca de arroz",
+      "comparisonBasis": "1 paquete de 1 kilogramo en ambos meses",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "jabon-dove",
+      "previousProductIds": ["gtin:07891150095618"],
+      "currentProductIds": ["gtin:07891150095700"],
+      "kind": "equivalent",
+      "reason": "Mismo jabón comprado como paquete en lugar de unidades sueltas",
+      "comparisonBasis": "3 unidades de 90 gramos en ambos meses",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "yogur-dahi-natural",
+      "previousProductIds": ["gtin:07798136870545"],
+      "currentProductIds": ["gtin:07798136871856"],
+      "kind": "equivalent",
+      "reason": "Cambio confirmado de yogur natural a yogur griego natural Dahi",
+      "comparisonBasis": "1 pote de 190 gramos en ambos meses",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "reposicion-yerba",
+      "previousProductIds": ["gtin:00724373569895", "gtin:00786071065956"],
+      "currentProductIds": ["gtin:07793750000668"],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de yerba con menor volumen total",
+      "comparisonBasis": "750 gramos anteriores frente a 500 gramos actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "leche-chocolatada",
+      "previousProductIds": ["gtin:07798338291643"],
+      "currentProductIds": ["gtin:07798338291056"],
+      "kind": "equivalent",
+      "reason": "Cambio confirmado de formato de leche chocolatada Tres Niñas",
+      "comparisonBasis": "500 mililitros anteriores frente a 400 mililitros actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "reposicion-crema-dental",
+      "previousProductIds": ["gtin:07794640170386"],
+      "currentProductIds": ["gtin:07794640170720", "gtin:05054563204387"],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de crema dental sin correspondencia uno a uno",
+      "comparisonBasis": "1 crema anterior frente a 2 cremas actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "reposicion-esponjas",
+      "previousProductIds": ["gtin:07891040028931"],
+      "currentProductIds": ["gtin:07809635701107", "gtin:07798008381575"],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de esponjas de cocina",
+      "comparisonBasis": "2 fibras anteriores frente a 3 esponjas actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "surtido-quesos",
+      "previousProductIds": ["gtin:02514565002563", "gtin:02543740004948", "gtin:07798403210128", "gtin:07896183206031"],
+      "currentProductIds": ["gtin:03073781206289", "gtin:07790080013610", "gtin:07798096213611", "gtin:02800005903720", "gtin:07798338291735"],
+      "kind": "group-replacement",
+      "reason": "Renovación confirmada del surtido de quesos",
+      "comparisonBasis": "4 variedades anteriores frente a 5 actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "aromatizacion-hogar",
+      "previousProductIds": ["gtin:07798332216116", "gtin:07798332216338"],
+      "currentProductIds": ["gtin:08906038785440"],
+      "kind": "group-replacement",
+      "reason": "El incienso reemplazó la reposición de aromatizador y difusor",
+      "comparisonBasis": "2 productos anteriores frente a 1 actual",
+      "confidence": "confirmed"
+    }
+  ]
 }

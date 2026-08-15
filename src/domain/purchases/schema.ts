@@ -37,8 +37,10 @@ const exchangeRateSchema = z.object({
   fetchedAt: dateSchema,
 });
 
+const productIdSchema = z.string().regex(/^(gtin:\d{8,14}|[a-z0-9-]+:(sku|plu):[a-z0-9-]+|manual:[a-z0-9-]+)$/);
+
 const productSchema = z.object({
-  id: z.string().regex(/^(gtin:\d{8,14}|[a-z0-9-]+:(sku|plu):[a-z0-9-]+|manual:[a-z0-9-]+)$/),
+  id: productIdSchema,
   ticketName: z.string().min(1),
   normalizedName: z.string().min(1),
   category: z.string().min(1),
@@ -91,10 +93,13 @@ const ticketSchema = z.object({
 });
 
 const substitutionSchema = z.object({
-  previousProductId: z.string().min(1),
-  currentProductId: z.string().min(1),
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  previousProductIds: z.array(productIdSchema).min(1),
+  currentProductIds: z.array(productIdSchema).min(1),
+  kind: z.enum(["equivalent", "group-replacement"]),
   reason: z.string().min(1),
-  confidence: z.enum(["low", "medium", "high"]),
+  comparisonBasis: z.string().min(1),
+  confidence: z.literal("confirmed"),
 });
 
 export const purchaseMonthSchema = z.object({

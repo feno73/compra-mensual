@@ -7,6 +7,7 @@ const { comparison } = Astro.props;
 const causes = [
   { label: "Productos nuevos", value: comparison.factors.newProductsCents },
   { label: "Productos ausentes", value: comparison.factors.absentProductsCents },
+  { label: "Reemplazos", value: comparison.factors.substitutionsCents },
   { label: "Cantidades", value: comparison.factors.quantityCents },
   { label: "Precios", value: comparison.factors.priceCents },
   { label: "Promociones", value: comparison.factors.discountCents },
