@@ -1,6 +1,6 @@
 import { aggregateMonth } from "./comparison/aggregate";
 import { compareAggregates } from "./comparison/compare";
-import { buildProductPriceHistory, buildSpendingHistory } from "./history";
+import { buildProductPriceHistory, buildReplacementPriceHistories, buildSpendingHistory } from "./history";
 import type { PurchaseMonth } from "./purchases/types";
 
 export function createDashboardModel(months: PurchaseMonth[], selectedMonth: string) {
@@ -10,13 +10,17 @@ export function createDashboardModel(months: PurchaseMonth[], selectedMonth: str
   if (selectedIndex < 0) throw new Error(`Mes no encontrado: ${selectedMonth}`);
   const selected = aggregates[selectedIndex]!;
   const previous = selectedIndex > 0 ? aggregates[selectedIndex - 1]! : null;
+  const comparison = previous ? compareAggregates(previous, selected, sortedMonths[selectedIndex]!.substitutions) : null;
 
   return {
     months: sortedMonths.map((month) => month.month),
     selected,
     selectedSource: sortedMonths[selectedIndex]!,
-    comparison: previous ? compareAggregates(previous, selected) : null,
+    comparison,
     history: buildSpendingHistory(aggregates),
     priceHistories: buildProductPriceHistory(aggregates),
+    replacementPriceHistories: comparison
+      ? buildReplacementPriceHistories(comparison.substitutions, comparison.previousMonth, comparison.currentMonth)
+      : [],
   };
 }

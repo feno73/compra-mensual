@@ -27,9 +27,9 @@ const { model } = Astro.props;
       <ComparableProducts comparison={model.comparison} />
     </>
   ) : <section class="panel empty-state"><h2>Primer mes del historial</h2><p>Todavía no hay un mes anterior disponible para comparar.</p></section>}
-  <SubstitutionInferences substitutions={model.selectedSource.substitutions} />
+  <SubstitutionInferences substitutions={model.comparison?.substitutions ?? []} />
   <SpendingHistory history={model.history} selected={model.selected.month} />
-  <ProductPriceHistory histories={model.priceHistories} />
+  <ProductPriceHistory histories={model.priceHistories} replacementHistories={model.replacementPriceHistories} />
 </main>
 <footer><p>Importes netos del ticket · MEP vendedor de fin de jornada según ArgentinaDatos, no cierre bursátil oficial.</p></footer>
 <style>.brand-title{font-size:1rem;margin:0}</style>

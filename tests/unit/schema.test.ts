@@ -58,3 +58,31 @@ test("rechaza URLs completas en referencias públicas", () => {
   unsafe.tickets[0]!.exchangeRate.sourceReference = "https://example.com/ticket/token";
   expect(() => purchaseMonthSchema.parse(unsafe)).toThrow(/URL/i);
 });
+
+test("acepta sustituciones confirmadas uno a varios", () => {
+  const withSubstitution = structuredClone(validMonth);
+  withSubstitution.substitutions = [{
+    id: "crema-dental",
+    previousProductIds: ["gtin:07794640170386"],
+    currentProductIds: ["gtin:07794640170720", "gtin:05054563204387"],
+    kind: "group-replacement",
+    reason: "Reposición confirmada de crema dental",
+    comparisonBasis: "Un producto anterior por dos actuales",
+    confidence: "confirmed",
+  }] as never;
+  expect(purchaseMonthSchema.parse(withSubstitution).substitutions).toHaveLength(1);
+});
+
+test("rechaza sustituciones sin productos anteriores", () => {
+  const withSubstitution = structuredClone(validMonth);
+  withSubstitution.substitutions = [{
+    id: "invalida",
+    previousProductIds: [],
+    currentProductIds: ["gtin:07794640170720"],
+    kind: "equivalent",
+    reason: "Inválida",
+    comparisonBasis: "Sin anterior",
+    confidence: "confirmed",
+  }] as never;
+  expect(() => purchaseMonthSchema.parse(withSubstitution)).toThrow();
+});
