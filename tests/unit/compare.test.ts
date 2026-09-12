@@ -39,9 +39,9 @@ test("separa composición, cantidad, precio y descuento sin doble conteo", () =>
     newProductsCents: 0n,
     absentProductsCents: 0n,
     substitutionsCents: 10n,
-    quantityCents: 100n,
-    priceCents: 60n,
-    discountCents: -10n,
+    quantityCents: 90n,
+    priceCents: 54n,
+    discountCents: 6n,
     adjustmentsCents: -1n,
   });
   expect(result.totalChangeCents).toBe(159n);
@@ -55,6 +55,23 @@ test("separa composición, cantidad, precio y descuento sin doble conteo", () =>
     currentNetCents: 50n,
     changeCents: 10n,
   })]);
+});
+
+test("atribuye a cantidad la baja de unidades con precio y promoción iguales", () => {
+  const previous = aggregate("2026-07", [
+    { ...shared, id: "gtin:7790000000001", quantity: 4n, grossCents: 960n, discountCents: 240n, netCents: 720n },
+  ]);
+  const current = aggregate("2026-08", [
+    { ...shared, id: "gtin:7790000000001", quantity: 3n, grossCents: 720n, discountCents: 180n, netCents: 540n },
+  ]);
+  const result = compareAggregates(previous, current);
+  expect(result.comparable[0]).toMatchObject({
+    quantityCents: -180n,
+    priceCents: 0n,
+    discountCents: 0n,
+    changeCents: -180n,
+  });
+  expect(result.reconciledCents).toBe(-180n);
 });
 
 test("agrega reemplazos varios a uno sin inventar precio unitario", () => {

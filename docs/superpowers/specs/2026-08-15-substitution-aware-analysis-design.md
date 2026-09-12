@@ -57,9 +57,9 @@ El nuevo puente julio-agosto debe reconciliar exactamente $64.656,12:
 | Productos nuevos restantes | $191.877,21 |
 | Productos ausentes restantes | -$114.082,95 |
 | Reemplazos confirmados | -$12.105,49 |
-| Cambio de cantidad en SKU idénticos | -$2.400,00 |
-| Cambio de precio en SKU idénticos | $825,99 |
-| Cambio de descuentos en SKU idénticos | $541,36 |
+| Cambio de cantidad en SKU idénticos | -$1.800,00 |
+| Cambio de precio en SKU idénticos | $585,89 |
+| Cambio de descuentos en SKU idénticos | $181,46 |
 | Ajustes | $0,00 |
 
 La composición sigue explicando el aumento principal, pero ahora distingue $12.105,49 de ahorro neto por reemplazos. En particular, la leche proteica muestra $13.432,52 antes, $12.892,50 ahora y $540,02 de ahorro total, aproximadamente $90,00 por unidad.

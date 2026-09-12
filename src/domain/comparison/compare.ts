@@ -91,10 +91,14 @@ export function compareAggregates(
       continue;
     }
     const [oldQuantity, newQuantity] = alignedQuantities(oldProduct, product);
-    const quantityCents = divideRounded((newQuantity - oldQuantity) * oldProduct.grossCents, oldQuantity);
-    const priceCents = product.grossCents - oldProduct.grossCents - quantityCents;
-    const discountCents = -(product.discountCents - oldProduct.discountCents);
     const changeCents = product.netCents - oldProduct.netCents;
+    const quantityCents = divideRounded((newQuantity - oldQuantity) * oldProduct.netCents, oldQuantity);
+    const oldGrossAtNewQuantity = divideRounded(newQuantity * oldProduct.grossCents, oldQuantity);
+    const grossPriceChange = product.grossCents - oldGrossAtNewQuantity;
+    const priceCents = oldProduct.grossCents === 0n
+      ? 0n
+      : divideRounded(grossPriceChange * oldProduct.netCents, oldProduct.grossCents);
+    const discountCents = changeCents - quantityCents - priceCents;
     factors.quantityCents += quantityCents;
     factors.priceCents += priceCents;
     factors.discountCents += discountCents;

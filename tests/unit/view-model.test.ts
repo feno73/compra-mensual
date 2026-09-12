@@ -15,7 +15,7 @@ test("selecciona el mes y lo compara con el último mes disponible anterior", as
     { month: "2026-07", netUnitCents: 223875n },
     { month: "2026-08", netUnitCents: 214875n },
   ]);
-  expect(august.history).toHaveLength(2);
+  expect(august.history).toHaveLength(3);
   expect(august.priceHistories.length).toBeGreaterThan(0);
   expect(july.comparison).toBeNull();
 });
