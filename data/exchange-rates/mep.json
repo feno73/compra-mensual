@@ -16,6 +16,13 @@
       "rateCentsPerUsd": 152160,
       "sourceReference": "3f904bca88253d0f8c760d8a7b91eb56cffbafff",
       "fetchedAt": "2026-08-15"
+    },
+    {
+      "nominalDate": "2026-09-11",
+      "effectiveDate": "2026-09-11",
+      "rateCentsPerUsd": 153790,
+      "sourceReference": "42d8e82fc4e6d12c62fd317be324d7dcfe9ed136",
+      "fetchedAt": "2026-09-12"
     }
   ]
 }

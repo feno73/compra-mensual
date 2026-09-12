@@ -16,6 +16,9 @@ test("julio a agosto reconcilia y el cambio proviene principalmente de la compos
   expect(comparison.factors.newProductsCents).toBe(19_187_721n);
   expect(comparison.factors.absentProductsCents).toBe(-11_408_295n);
   expect(comparison.factors.substitutionsCents).toBe(-1_210_549n);
+  expect(comparison.factors.quantityCents).toBe(-180_000n);
+  expect(comparison.factors.priceCents).toBe(58_589n);
+  expect(comparison.factors.discountCents).toBe(18_146n);
   expect(comparison.substitutions).toHaveLength(11);
   expect(comparison.substitutions.find((item) => item.id === "leche-proteica")).toMatchObject({ changeCents: -54_002n });
   expect(comparison.comparable.length).toBeGreaterThan(0);

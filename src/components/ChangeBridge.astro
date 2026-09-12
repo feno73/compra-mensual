@@ -9,9 +9,9 @@ const rows = [
   ["Productos nuevos", comparison.factors.newProductsCents, "Lo que apareció este mes"],
   ["Productos ausentes", comparison.factors.absentProductsCents, "Lo que dejó de estar en el carrito"],
   ["Reemplazos", comparison.factors.substitutionsCents, "Cambio neto de alternativas confirmadas"],
-  ["Cambio de cantidad", comparison.factors.quantityCents, "Más o menos unidades del mismo producto"],
-  ["Cambio de precio", comparison.factors.priceCents, "Variación del precio de lista"],
-  ["Promociones", comparison.factors.discountCents, "Diferencia de descuentos en productos comparables"],
+  ["Cambio de cantidad", comparison.factors.quantityCents, "Más o menos unidades valuadas al neto anterior"],
+  ["Cambio de precio", comparison.factors.priceCents, "Precio de lista manteniendo la promoción anterior"],
+  ["Promociones", comparison.factors.discountCents, "Cambio del beneficio después de cantidad y precio"],
   ["Ajustes", comparison.factors.adjustmentsCents, "Redondeos generales del ticket"],
 ] as const;
 const maximum = rows.reduce((max, [, value]) => (value < 0n ? -value : value) > max ? (value < 0n ? -value : value) : max, 1n);
