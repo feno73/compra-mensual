@@ -13,11 +13,11 @@
       "exchangeRate": {
         "nominalDate": "2026-09-11",
         "effectiveDate": "2026-09-11",
-        "rateCentsPerUsd": 153790,
+        "rateCentsPerUsd": 153990,
         "source": "ArgentinaDatos",
         "sourceField": "venta",
-        "sourceReference": "42d8e82fc4e6d12c62fd317be324d7dcfe9ed136",
-        "fetchedAt": "2026-09-12"
+        "sourceReference": "5d9fb97f07a67093a2cc32d61807367022684494",
+        "fetchedAt": "2026-11-23"
       },
       "lines": [
         {
@@ -316,7 +316,7 @@
             "id": "gtin:07797222000842",
             "ticketName": "LIMA P/UÑAS METALICA PRELUDE PAQ 1 UNI",
             "normalizedName": "Lima p/uñas metalica prelude paq 1 uni",
-            "category": "Almacén"
+            "category": "Cuidado personal"
           },
           "quantity": {
             "value": 1,
@@ -568,7 +568,7 @@
             "id": "gtin:00754697468963",
             "ticketName": "ESCOBILLON INTERIO CAPELA GLOW X 1 UNI",
             "normalizedName": "Escobillon interio capela glow x 1 uni",
-            "category": "Almacén"
+            "category": "Limpieza"
           },
           "quantity": {
             "value": 1,
@@ -596,7 +596,7 @@
             "id": "gtin:07891010245160",
             "ticketName": "DESMAQUILLANTE AGUA MICELAR P NEUTROGENA BOT 200 ML",
             "normalizedName": "Desmaquillante agua micelar p neutrogena bot 200 ml",
-            "category": "Almacén"
+            "category": "Cuidado personal"
           },
           "quantity": {
             "value": 1,
@@ -680,7 +680,7 @@
             "id": "gtin:07792459017304",
             "ticketName": "CABO MADERA C/CABO  ASAPRACTIC X 1 UNI",
             "normalizedName": "Cabo madera c/cabo asapractic x 1 uni",
-            "category": "Almacén"
+            "category": "Limpieza"
           },
           "quantity": {
             "value": 1,
@@ -904,7 +904,7 @@
             "id": "gtin:03168430316522",
             "ticketName": "WOK 28 CM PRIMARY TEFAL ANTIADH . . .",
             "normalizedName": "Wok 28 cm primary tefal antiadh . . .",
-            "category": "Almacén"
+            "category": "Hogar"
           },
           "quantity": {
             "value": 1,
@@ -1044,7 +1044,7 @@
             "id": "gtin:07794520869003",
             "ticketName": "CHIZITOS SAB.QUESO KRACHITOS PAQ 60 GRM",
             "normalizedName": "Chizitos sab.queso krachitos paq 60 grm",
-            "category": "Lácteos"
+            "category": "Almacén"
           },
           "quantity": {
             "value": 1,
@@ -1100,7 +1100,7 @@
             "id": "gtin:07790480090006",
             "ticketName": "MATE COCIDO TRADIC.X25 SAQ LA TRANQUER CJA 62.5 GRM",
             "normalizedName": "Mate cocido tradic.x25 saq la tranquer cja 62.5 grm",
-            "category": "Almacén"
+            "category": "Bebidas"
           },
           "quantity": {
             "value": 1,
@@ -1156,7 +1156,7 @@
             "id": "gtin:07791293051710",
             "ticketName": "ANTITRANSPIRANTE PROTEC.TOTAL DOVE MEN AER 250 ML",
             "normalizedName": "Antitranspirante protec.total dove men aer 250 ml",
-            "category": "Almacén"
+            "category": "Cuidado personal"
           },
           "quantity": {
             "value": 1,
@@ -1380,7 +1380,7 @@
             "id": "gtin:07793440704876",
             "ticketName": "VINO PINOT NOIR . NIETO SENET BOT 750 ML",
             "normalizedName": "Vino pinot noir . nieto senet bot 750 ml",
-            "category": "Almacén"
+            "category": "Bebidas"
           },
           "quantity": {
             "value": 1,
@@ -1408,7 +1408,7 @@
             "id": "gtin:07797080000251",
             "ticketName": "MEDIA CABALLERO SOQUETE LISO . . .",
             "normalizedName": "Media caballero soquete liso . . .",
-            "category": "Almacén"
+            "category": "Hogar"
           },
           "quantity": {
             "value": 2,
@@ -1716,7 +1716,7 @@
             "id": "gtin:07798113301529",
             "ticketName": "SODA . MANAOS SIF 2 LTR",
             "normalizedName": "Soda . manaos sif 2 ltr",
-            "category": "Almacén"
+            "category": "Bebidas"
           },
           "quantity": {
             "value": 1,
@@ -1828,7 +1828,7 @@
             "id": "gtin:07798126084884",
             "ticketName": "VINO BLANCO . HIPPIE LOVE BOT 750 ML",
             "normalizedName": "Vino blanco . hippie love bot 750 ml",
-            "category": "Almacén"
+            "category": "Bebidas"
           },
           "quantity": {
             "value": 1,
@@ -1878,7 +1878,7 @@
             "id": "gtin:07790070106919",
             "ticketName": "VINO TINTO MALB.PIN.NO.0% NIETO SENET BOT 750 ML",
             "normalizedName": "Vino tinto malb.pin.no.0% nieto senet bot 750 ml",
-            "category": "Almacén"
+            "category": "Bebidas"
           },
           "quantity": {
             "value": 1,

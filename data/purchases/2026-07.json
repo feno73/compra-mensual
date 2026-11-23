@@ -512,7 +512,7 @@
             "id": "gtin:07794640171420",
             "ticketName": "PASTILLAS EFERVESC LIMPIEZA 3M 30 COREGA CJA 30 UNI",
             "normalizedName": "Pastillas efervesc limpieza 3m 30 corega cja 30 uni",
-            "category": "Almacén"
+            "category": "Cuidado personal"
           },
           "quantity": {
             "value": 1,
@@ -624,7 +624,7 @@
             "id": "gtin:07790117061096",
             "ticketName": "ROLLO PAPEL MANTECA SEPARATA ROL 5 MTR",
             "normalizedName": "Rollo papel manteca separata rol 5 mtr",
-            "category": "Lácteos"
+            "category": "Hogar"
           },
           "quantity": {
             "value": 1,

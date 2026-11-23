@@ -104,7 +104,7 @@
             "id": "gtin:03073781206289",
             "ticketName": "QUES.ESPECIAL FUNDIDO VACA QUE RI CJA 120 GRM",
             "normalizedName": "Ques.especial fundido vaca que ri cja 120 grm",
-            "category": "Almacén"
+            "category": "Lácteos"
           },
           "quantity": {
             "value": 1,
@@ -400,7 +400,7 @@
             "id": "gtin:07798096213611",
             "ticketName": "QUES.MUZZ.D/LAT MINI BOCCONCIN WAPI POU 100 GRM",
             "normalizedName": "Ques.muzz.d/lat mini bocconcin wapi pou 100 grm",
-            "category": "Almacén"
+            "category": "Lácteos"
           },
           "quantity": {
             "value": 1,
@@ -752,7 +752,7 @@
             "id": "gtin:07790310985649",
             "ticketName": "DORITOS SABOR QUESO DORITOS PAQ 77 GRM",
             "normalizedName": "Doritos sabor queso doritos paq 77 grm",
-            "category": "Lácteos"
+            "category": "Almacén"
           },
           "quantity": {
             "value": 1,
@@ -1742,7 +1742,7 @@
             "id": "gtin:07798136871856",
             "ticketName": "YOG.GRIEGO NATURAL S/AZUC DAHI FRA 190 GRM",
             "normalizedName": "Yog.griego natural s/azuc dahi fra 190 grm",
-            "category": "Almacén"
+            "category": "Lácteos"
           },
           "quantity": {
             "value": 1,

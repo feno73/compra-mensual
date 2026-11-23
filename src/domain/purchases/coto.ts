@@ -5,6 +5,7 @@ interface ParseOptions {
   rateCentsPerUsd: number;
   sourceReference: string;
   fetchedAt: string;
+  effectiveDate?: string;
 }
 
 function decodeHtml(value: string): string {
@@ -43,9 +44,15 @@ function totalAfter(html: string, label: string): number {
   return Math.abs(cents(match[1]));
 }
 
-function categoryFor(name: string): string {
-  if (/(LECHE|QUESO|YOGUR|MANTECA)/.test(name)) return "Lácteos";
-  if (/(GASEOSA|CERVEZA|ESPUMANTE|JUGO|YERBA|\bTE\b)/.test(name)) return "Bebidas";
+export function categoryFor(name: string): string {
+  // Nombres engañosos: contienen palabras de otra categoría.
+  if (/(SAB\.QUESO|SABOR QUESO|CHEETOS)/.test(name)) return "Almacén";
+  if (/(PAPEL MANTECA|\bCOPA\b)/.test(name)) return "Hogar";
+  if (/(LIMPIADOR FACI|DESMAQUILLANTE|LIMA P\/UÑAS|COREGA|ANTITRANSPIRANTE)/.test(name)) return "Cuidado personal";
+  if (/(P\/DILUIR|LIMP\.LIQ|DETERGENTE|ESCOBILLON|CABO MADERA)/.test(name)) return "Limpieza";
+  if (/(MACETA|CORTINA|ESPUMADERA|REPASADOR|ADORNO|\bWOK\b|MEDIA CABALLERO)/.test(name)) return "Hogar";
+  if (/(LECHE|QUESO|\bQUES\.|HOLANDA FRACC|YOGUR|\bYOG\.|MANTECA|DANETTE)/.test(name)) return "Lácteos";
+  if (/(GASEOSA|CERVEZA|ESPUMANTE|JUGO|YERBA|\bTE\b|\bVINO\b|\bSODA\b|ENERGIZANTE|MATE COCIDO)/.test(name)) return "Bebidas";
   if (/(DENTAL|JABON|JABÓN|CREMA CORPORAL|SHAMPOO|ACONDICIONADOR|MASCARILLA)/.test(name)) return "Cuidado personal";
   if (/(ESPONJA|PAÑO|ROLLO|BOLSA RESIDUO|LIMPIADOR|INSECTICIDA|P\.HIGIENICO)/.test(name)) return "Limpieza";
   if (/(TARTERA|HERMETICO|COPA|VELA|INCIENSO|RALL|AROMATIZADOR|DIFUSOR)/.test(name)) return "Hogar";
@@ -116,7 +123,7 @@ export function parseCotoTicketHtml(html: string, options: ParseOptions): Purcha
     merchant: { name: "Coto", branch },
     exchangeRate: {
       nominalDate: purchaseDate,
-      effectiveDate: purchaseDate,
+      effectiveDate: options.effectiveDate ?? purchaseDate,
       rateCentsPerUsd: options.rateCentsPerUsd,
       source: "ArgentinaDatos",
       sourceField: "venta",
