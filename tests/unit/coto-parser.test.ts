@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 
-import { parseCotoTicketHtml } from "../../src/domain/purchases/coto";
+import { categoryFor, parseCotoTicketHtml } from "../../src/domain/purchases/coto";
 
 const html = `
 <h2 class="single-title">SUC181 COTO CICSA</h2>
@@ -42,4 +42,17 @@ test("extrae líneas Coto y explicita el centavo de redondeo", () => {
   });
   expect(ticket.adjustments).toEqual([{ description: "Redondeo informado por conciliación", amountCents: -1, kind: "rounding" }]);
   expect(ticket.totals.paidCents).toBe(725740);
+});
+
+test.each([
+  ["CHEETOS OND.QUESO CREM CHEETOS PAQ 43 GRM", "Almacén"],
+  ["ROLLO PAPEL MANTECA GLOW PAQ 4 MTR", "Hogar"],
+  ["COPA CRISTAL VINO CORVUS 350ML", "Hogar"],
+  ["GEL LIMPIADOR FACI FORMULA SUAVE NEUTROGENA", "Cuidado personal"],
+  ["JABON LIQ. CONCENT P/DILUIR ACE BOT 500 ML", "Limpieza"],
+  ["HOLANDA FRACCIONADO TREGAR", "Lácteos"],
+  ["VINO MARSELAN . MARTINO BOT 750 ML", "Bebidas"],
+  ["VINAGRE ALCOHOL MENOYO PET 1 LTR", "Almacén"],
+])("clasifica %s", (name, category) => {
+  expect(categoryFor(name)).toBe(category);
 });

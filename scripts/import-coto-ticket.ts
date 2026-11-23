@@ -4,9 +4,9 @@ import { dirname } from "node:path";
 
 import { parseCotoTicketHtml } from "../src/domain/purchases/coto";
 
-const [input, output, rate, sourceReference] = process.argv.slice(2);
+const [input, output, rate, sourceReference, effectiveDate] = process.argv.slice(2);
 if (!input || !output || !rate || !sourceReference) {
-  throw new Error("Uso: pnpm import:coto <html> <json> <mep-centavos> <commit-fuente>");
+  throw new Error("Uso: pnpm import:coto <html> <json> <mep-centavos> <commit-fuente> [fecha-efectiva]");
 }
 
 const html = await readFile(input, "utf8");
@@ -15,7 +15,8 @@ const ticket = parseCotoTicketHtml(html, {
   sourceDigest,
   rateCentsPerUsd: Number(rate),
   sourceReference,
-  fetchedAt: "2026-08-15",
+  fetchedAt: new Date().toLocaleDateString("sv-SE"),
+  effectiveDate,
 });
 const month = ticket.purchaseDate.slice(0, 7);
 const document = { schemaVersion: 1, month, currency: "ARS", tickets: [ticket], substitutions: [] };

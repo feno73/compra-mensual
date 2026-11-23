@@ -1,0 +1,1465 @@
+{
+  "schemaVersion": 1,
+  "month": "2026-11",
+  "currency": "ARS",
+  "tickets": [
+    {
+      "sourceDigest": "sha256:f9a3bae0682fcee32ad8b5098a88d4c0066b4bc5ee0cf4f49ad64d59e902e856",
+      "purchaseDate": "2026-11-20",
+      "merchant": {
+        "name": "Coto",
+        "branch": "SUC181 COTO CICSA"
+      },
+      "exchangeRate": {
+        "nominalDate": "2026-11-20",
+        "effectiveDate": "2026-11-20",
+        "rateCentsPerUsd": 174310,
+        "source": "ArgentinaDatos",
+        "sourceField": "venta",
+        "sourceReference": "599391456bc5a9c9b7c8cfc22509b213d6919185",
+        "fetchedAt": "2026-11-23"
+      },
+      "lines": [
+        {
+          "lineId": "1",
+          "product": {
+            "id": "gtin:07790895000232",
+            "ticketName": "GASEOSA COLA COCA COLA LAT 354 CMQ",
+            "normalizedName": "Gaseosa cola coca cola lat 354 cmq",
+            "category": "Bebidas"
+          },
+          "quantity": {
+            "value": 2,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 270000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 540000,
+          "discounts": [],
+          "netCents": 540000
+        },
+        {
+          "lineId": "2",
+          "product": {
+            "id": "gtin:02512766004348",
+            "ticketName": "QUESO PATAGONICO . LA SUERTE X 1 KGM",
+            "normalizedName": "Queso patagonico . la suerte x 1 kgm",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 434,
+            "scale": 3,
+            "unit": "kg"
+          },
+          "unitListPrice": {
+            "value": 3937500,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 1708875,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 427219,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 1281656
+        },
+        {
+          "lineId": "3",
+          "product": {
+            "id": "gtin:02800000434830",
+            "ticketName": "DURAZNO DIET COTO LAT 800 GRM",
+            "normalizedName": "Durazno diet coto lat 800 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 375000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 375000,
+          "discounts": [
+            {
+              "description": "*COTO 25%",
+              "amountCents": 93863,
+              "promotion": "*COTO 25%"
+            }
+          ],
+          "netCents": 281137
+        },
+        {
+          "lineId": "4",
+          "product": {
+            "id": "gtin:07798060850026",
+            "ticketName": "MANTECA . TONADITA PAN 200 GRM",
+            "normalizedName": "Manteca . tonadita pan 200 grm",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 464900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 464900,
+          "discounts": [
+            {
+              "description": "COMU+*25% MARCAS IMPOSIBLES (LACTEOS )",
+              "amountCents": 162715,
+              "promotion": "COMU+*25% MARCAS IMPOSIBLES (LACTEOS )"
+            }
+          ],
+          "netCents": 302185
+        },
+        {
+          "lineId": "5",
+          "product": {
+            "id": "gtin:07790616000473",
+            "ticketName": "QUESO PORT SALUT FRACCIONADO VACALIN PAQ 400 GRM",
+            "normalizedName": "Queso port salut fraccionado vacalin paq 400 grm",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 769900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 769900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 192475,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 577425
+        },
+        {
+          "lineId": "6",
+          "product": {
+            "id": "gtin:07791728003253",
+            "ticketName": "VINO TORRONTES . SERIE A ZUC BOT 750 CMQ",
+            "normalizedName": "Vino torrontes . serie a zuc bot 750 cmq",
+            "category": "Bebidas"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 1786100,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 1786100,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 446525,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 1339575
+        },
+        {
+          "lineId": "7",
+          "product": {
+            "id": "gtin:07791476021011",
+            "ticketName": "GARBANZOS . EGRAN PAQ 400 GRM",
+            "normalizedName": "Garbanzos . egran paq 400 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 209900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 209900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 52475,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 157425
+        },
+        {
+          "lineId": "8",
+          "product": {
+            "id": "gtin:07791828900056",
+            "ticketName": "ROLLOS DE COCINA INFINITY FELPITA MTS 11.79 M2",
+            "normalizedName": "Rollos de cocina infinity felpita mts 11.79 m2",
+            "category": "Limpieza"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 546099,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 546099,
+          "discounts": [
+            {
+              "description": "*25% MARCAS IMPOSIBLES",
+              "amountCents": 136525,
+              "promotion": "*25% MARCAS IMPOSIBLES"
+            }
+          ],
+          "netCents": 409574
+        },
+        {
+          "lineId": "9",
+          "product": {
+            "id": "gtin:00070501872956",
+            "ticketName": "GEL LIMPIADOR FACI FORMULA SUAVE NEUTROGENA BOM 354 ML",
+            "normalizedName": "Gel limpiador faci formula suave neutrogena bom 354 ml",
+            "category": "Cuidado personal"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 2893299,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 2893299,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 723325,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 2169974
+        },
+        {
+          "lineId": "10",
+          "product": {
+            "id": "gtin:02800004817349",
+            "ticketName": "CHOCLO ENTERO CIUDAD DEL  LAT 300 GRM",
+            "normalizedName": "Choclo entero ciudad del lat 300 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 3,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 149900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 449700,
+          "discounts": [
+            {
+              "description": "*25% CLASES IMPOSIBLES",
+              "amountCents": 112425,
+              "promotion": "*25% CLASES IMPOSIBLES"
+            }
+          ],
+          "netCents": 337275
+        },
+        {
+          "lineId": "11",
+          "product": {
+            "id": "gtin:08011940100011",
+            "ticketName": "QUESO AZUL GORGONZOLA BALLARINI BLI 100 GRM",
+            "normalizedName": "Queso azul gorgonzola ballarini bli 100 grm",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 1189900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 1189900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 297475,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 892425
+        },
+        {
+          "lineId": "12",
+          "product": {
+            "id": "gtin:07793762012024",
+            "ticketName": "MACETA EDEN GRIS 20CM . . .",
+            "normalizedName": "Maceta eden gris 20cm . . .",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 219900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 219900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 54975,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 164925
+        },
+        {
+          "lineId": "13",
+          "product": {
+            "id": "gtin:07790158229486",
+            "ticketName": "MIEL LIQUIDA ALELUYA POT 500 GRM",
+            "normalizedName": "Miel liquida aleluya pot 500 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 850000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 850000,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 212500,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 637500
+        },
+        {
+          "lineId": "14",
+          "product": {
+            "id": "gtin:00790757845640",
+            "ticketName": "ROLLO PAPEL MANTECA GLOW PAQ 4 MTR",
+            "normalizedName": "Rollo papel manteca glow paq 4 mtr",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 645099,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 645099,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 161275,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 483824
+        },
+        {
+          "lineId": "15",
+          "product": {
+            "id": "gtin:07790742192301",
+            "ticketName": "LECHE ENTERA 3% CASANTO SCH 1 LTR",
+            "normalizedName": "Leche entera 3% casanto sch 1 ltr",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 201800,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 201800,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 50450,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 151350
+        },
+        {
+          "lineId": "16",
+          "product": {
+            "id": "gtin:07793762002964",
+            "ticketName": "MACETA VERCELLI 22CM PIEDRA ARENA . . .",
+            "normalizedName": "Maceta vercelli 22cm piedra arena . . .",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 1209900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 1209900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 302475,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 907425
+        },
+        {
+          "lineId": "17",
+          "product": {
+            "id": "gtin:02800005717303",
+            "ticketName": "PROTECTOR DE CORTINA 120 MICRONES . . .",
+            "normalizedName": "Protector de cortina 120 micrones . . .",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 2099900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 2099900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 524975,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 1574925
+        },
+        {
+          "lineId": "18",
+          "product": {
+            "id": "gtin:07798136870545",
+            "ticketName": "YOGUR ENTERO FIR.NATU.S/A DAHI FRA 190 GRM",
+            "normalizedName": "Yogur entero fir.natu.s/a dahi fra 190 grm",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 293500,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 293500,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 73375,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 220125
+        },
+        {
+          "lineId": "19",
+          "product": {
+            "id": "gtin:08005110200007",
+            "ticketName": "CONCENT.D/TOMATE . MUTTI LAT 140 GRM",
+            "normalizedName": "Concent.d/tomate . mutti lat 140 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 949000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 949000,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 237250,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 711750
+        },
+        {
+          "lineId": "20",
+          "product": {
+            "id": "gtin:07798319215019",
+            "ticketName": "ESPUMADERA NYLON GRIS MADERA . . .",
+            "normalizedName": "Espumadera nylon gris madera . . .",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 709900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 709900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 177475,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 532425
+        },
+        {
+          "lineId": "21",
+          "product": {
+            "id": "gtin:07790071070516",
+            "ticketName": "TOSTADAS ORGANICAS RIERA PAQ 200 GRM",
+            "normalizedName": "Tostadas organicas riera paq 200 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 282000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 282000,
+          "discounts": [
+            {
+              "description": "*35% MARCAS IMPOSIBLES",
+              "amountCents": 98700,
+              "promotion": "*35% MARCAS IMPOSIBLES"
+            }
+          ],
+          "netCents": 183300
+        },
+        {
+          "lineId": "22",
+          "product": {
+            "id": "gtin:07790670052548",
+            "ticketName": "PRIMAVERA . GREEN LIFE PAQ 350 GRM",
+            "normalizedName": "Primavera . green life paq 350 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 452900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 452900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 113225,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 339675
+        },
+        {
+          "lineId": "23",
+          "product": {
+            "id": "gtin:07790670052609",
+            "ticketName": "ARVEJAS . GREEN LIFE PAQ 350 GRM",
+            "normalizedName": "Arvejas . green life paq 350 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 456900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 456900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 114225,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 342675
+        },
+        {
+          "lineId": "24",
+          "product": {
+            "id": "gtin:07790250015536",
+            "ticketName": "P.HIGIENICO D/H.PLUS X4 HIGIENOL PAQ 12 M2",
+            "normalizedName": "P.higienico d/h.plus x4 higienol paq 12 m2",
+            "category": "Limpieza"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 493699,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 493699,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 123425,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 370274
+        },
+        {
+          "lineId": "25",
+          "product": {
+            "id": "gtin:07790040143630",
+            "ticketName": "ALFAJOR REL.MOUS.Y MAN COFLER PAQ 244.2 GRM",
+            "normalizedName": "Alfajor rel.mous.y man cofler paq 244.2 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 821099,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 821099,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 205275,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 615824
+        },
+        {
+          "lineId": "26",
+          "product": {
+            "id": "gtin:07798259439681",
+            "ticketName": "MILANESAS 100% PLANTAS WANNA V CJA 280 GRM",
+            "normalizedName": "Milanesas 100% plantas wanna v cja 280 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 895000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 895000,
+          "discounts": [
+            {
+              "description": "*WANNA 25%",
+              "amountCents": 225182,
+              "promotion": "*WANNA 25%"
+            }
+          ],
+          "netCents": 669818
+        },
+        {
+          "lineId": "27",
+          "product": {
+            "id": "gtin:07790310985359",
+            "ticketName": "CHEETOS OND.QUESO CREM CHEETOS PAQ 43 GRM",
+            "normalizedName": "Cheetos ond.queso crem cheetos paq 43 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 250000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 250000,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 62500,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 187500
+        },
+        {
+          "lineId": "28",
+          "product": {
+            "id": "gtin:02800005860238",
+            "ticketName": "REPASADOR WAFFLE GRISM 55X55 . . .",
+            "normalizedName": "Repasador waffle grism 55x55 . . .",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 2,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 599900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 1199800,
+          "discounts": [
+            {
+              "description": "*2X1 TEXTIL SELEC",
+              "amountCents": 599900,
+              "promotion": "*2X1 TEXTIL SELEC"
+            }
+          ],
+          "netCents": 599900
+        },
+        {
+          "lineId": "29",
+          "product": {
+            "id": "gtin:07792180144157",
+            "ticketName": "SEMOLA D/TRIGO PUREZA PAQ 500 GRM",
+            "normalizedName": "Semola d/trigo pureza paq 500 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 213000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 213000,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 53250,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 159750
+        },
+        {
+          "lineId": "30",
+          "product": {
+            "id": "gtin:07891150095700",
+            "ticketName": "JABON TOCADOR PIEL SENSI.X3 DOVE CJA 270 GRM",
+            "normalizedName": "Jabon tocador piel sensi.x3 dove cja 270 grm",
+            "category": "Cuidado personal"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 765599,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 765599,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 191399,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 574200
+        },
+        {
+          "lineId": "31",
+          "product": {
+            "id": "gtin:07793890260885",
+            "ticketName": "PAN ARTESANO ORI.C/MAS.MADR ARTESANO BSA 500 GRM",
+            "normalizedName": "Pan artesano ori.c/mas.madr artesano bsa 500 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 944199,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 944199,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 236049,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 708150
+        },
+        {
+          "lineId": "32",
+          "product": {
+            "id": "gtin:07798332215812",
+            "ticketName": "PORTAINCIENSO KOBE TERRA . . .",
+            "normalizedName": "Portaincienso kobe terra . . .",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 1139900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 1139900,
+          "discounts": [
+            {
+              "description": "*40% PORTAINCIENSO",
+              "amountCents": 455960,
+              "promotion": "*40% PORTAINCIENSO"
+            }
+          ],
+          "netCents": 683940
+        },
+        {
+          "lineId": "33",
+          "product": {
+            "id": "gtin:07791293050201",
+            "ticketName": "ACONDICIONADOR ONDAS BOHO TRESEMME BOT 500 ML",
+            "normalizedName": "Acondicionador ondas boho tresemme bot 500 ml",
+            "category": "Cuidado personal"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 1188299,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 1188299,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 297075,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 891224
+        },
+        {
+          "lineId": "34",
+          "product": {
+            "id": "gtin:02800006098128",
+            "ticketName": "REPASADOR TERRY TOA GRISO 40X60 . . .",
+            "normalizedName": "Repasador terry toa griso 40x60 . . .",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 599900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 599900,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 149975,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 449925
+        },
+        {
+          "lineId": "35",
+          "product": {
+            "id": "gtin:08437008383002",
+            "ticketName": "QUESO CREMA ORIGINAL QUESCREM POT 200 GRM",
+            "normalizedName": "Queso crema original quescrem pot 200 grm",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 799900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 799900,
+          "discounts": [
+            {
+              "description": "*QUESCREM 35%",
+              "amountCents": 280045,
+              "promotion": "*QUESCREM 35%"
+            }
+          ],
+          "netCents": 519855
+        },
+        {
+          "lineId": "36",
+          "product": {
+            "id": "gtin:07791290796720",
+            "ticketName": "DETERGENTE ORIGINAL CIF DOY 400 ML",
+            "normalizedName": "Detergente original cif doy 400 ml",
+            "category": "Limpieza"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 428999,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 428999,
+          "discounts": [
+            {
+              "description": "*40% MARCAS IMPOSIBLE",
+              "amountCents": 171600,
+              "promotion": "*40% MARCAS IMPOSIBLE"
+            }
+          ],
+          "netCents": 257399
+        },
+        {
+          "lineId": "37",
+          "product": {
+            "id": "gtin:07793890260724",
+            "ticketName": "TORTILLA D/TRIG.FAJITAS TIA ROSA PAQ 275 GRM",
+            "normalizedName": "Tortilla d/trig.fajitas tia rosa paq 275 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 455999,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 455999,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 114000,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 341999
+        },
+        {
+          "lineId": "38",
+          "product": {
+            "id": "gtin:08008857112657",
+            "ticketName": "FID.FUSILLI TRICOLOR PALLANTE PAQ 500 GRM",
+            "normalizedName": "Fid.fusilli tricolor pallante paq 500 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 450000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 450000,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 112500,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 337500
+        },
+        {
+          "lineId": "39",
+          "product": {
+            "id": "gtin:08008857112190",
+            "ticketName": "FID.SPAGHETTI . PALLANTE PAQ 500 GRM",
+            "normalizedName": "Fid.spaghetti . pallante paq 500 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 450000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 450000,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 112500,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 337500
+        },
+        {
+          "lineId": "40",
+          "product": {
+            "id": "gtin:07793890261905",
+            "ticketName": "RAPIDITAS C/CHIA Y LINO RAPIDITAS PAQ 275 GRM",
+            "normalizedName": "Rapiditas c/chia y lino rapiditas paq 275 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 438399,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 438399,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 109600,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 328799
+        },
+        {
+          "lineId": "41",
+          "product": {
+            "id": "gtin:07798338291803",
+            "ticketName": "LECHE DES.LV C/PROTEINA TRES NIÑAS TTB 1 LTR",
+            "normalizedName": "Leche des.lv c/proteina tres niñas ttb 1 ltr",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 2,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 325000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 650000,
+          "discounts": [
+            {
+              "description": "*50% 2DA MARCAS IMPOSIBLES",
+              "amountCents": 162500,
+              "promotion": "*50% 2DA MARCAS IMPOSIBLES"
+            }
+          ],
+          "netCents": 487500
+        },
+        {
+          "lineId": "42",
+          "product": {
+            "id": "gtin:07791337010581",
+            "ticketName": "POSTRE SAB.DDL X2 DANETTE POT 190 GRM",
+            "normalizedName": "Postre sab.ddl x2 danette pot 190 grm",
+            "category": "Lácteos"
+          },
+          "quantity": {
+            "value": 2,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 542000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 1084000,
+          "discounts": [
+            {
+              "description": "*25% MARCAS IMPOSIBLES",
+              "amountCents": 271000,
+              "promotion": "*25% MARCAS IMPOSIBLES"
+            }
+          ],
+          "netCents": 813000
+        },
+        {
+          "lineId": "43",
+          "product": {
+            "id": "gtin:02800006254708",
+            "ticketName": "ADORNO MUSICAL ARBOL 18X32CM . . .",
+            "normalizedName": "Adorno musical arbol 18x32cm . . .",
+            "category": "Hogar"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 6299900,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 6299900,
+          "discounts": [
+            {
+              "description": "*30% RTC",
+              "amountCents": 1889970,
+              "promotion": "*30% RTC"
+            }
+          ],
+          "netCents": 4409930
+        },
+        {
+          "lineId": "44",
+          "product": {
+            "id": "gtin:07791675909738",
+            "ticketName": "ACEITUNAS VERDE DESC.XL CASTELL DOY 280 GRM",
+            "normalizedName": "Aceitunas verde desc.xl castell doy 280 grm",
+            "category": "Almacén"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 383200,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 383200,
+          "discounts": [
+            {
+              "description": "*35% CLASES IMPOSIBLES",
+              "amountCents": 134120,
+              "promotion": "*35% CLASES IMPOSIBLES"
+            }
+          ],
+          "netCents": 249080
+        },
+        {
+          "lineId": "45",
+          "product": {
+            "id": "gtin:07798166031343",
+            "ticketName": "VINO MARSELAN . MARTINO BOT 750 ML",
+            "normalizedName": "Vino marselan . martino bot 750 ml",
+            "category": "Bebidas"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 2690000,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 2690000,
+          "discounts": [
+            {
+              "description": "*35% MARCAS IMPOSIBLES",
+              "amountCents": 941500,
+              "promotion": "*35% MARCAS IMPOSIBLES"
+            }
+          ],
+          "netCents": 1748500
+        },
+        {
+          "lineId": "46",
+          "product": {
+            "id": "gtin:07798119220428",
+            "ticketName": "ENERGIZANTE TROPICAL SPEED UNLIM LAT 473 ML",
+            "normalizedName": "Energizante tropical speed unlim lat 473 ml",
+            "category": "Bebidas"
+          },
+          "quantity": {
+            "value": 1,
+            "scale": 0,
+            "unit": "unit"
+          },
+          "unitListPrice": {
+            "value": 304500,
+            "scale": 2,
+            "currency": "ARS"
+          },
+          "grossCents": 304500,
+          "discounts": [
+            {
+              "description": "MERCADO PAGO 25% - VIERNES",
+              "amountCents": 76125,
+              "promotion": "MERCADO PAGO 25% - VIERNES"
+            }
+          ],
+          "netCents": 228375
+        }
+      ],
+      "adjustments": [
+        {
+          "description": "Redondeo informado por conciliación",
+          "amountCents": -1,
+          "kind": "rounding"
+        }
+      ],
+      "totals": {
+        "grossCents": 42249864,
+        "discountCents": 11741372,
+        "paidCents": 30508491
+      }
+    }
+  ],
+  "substitutions": [
+    {
+      "id": "queso-crema",
+      "previousProductIds": [
+        "gtin:05711953158421"
+      ],
+      "currentProductIds": [
+        "gtin:08437008383002"
+      ],
+      "kind": "equivalent",
+      "reason": "Cambio de marca de queso crema",
+      "comparisonBasis": "1 pote de 200 gramos en ambos meses",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "surtido-quesos",
+      "previousProductIds": [
+        "gtin:02523683004786",
+        "gtin:02542480003525",
+        "gtin:07790244941827"
+      ],
+      "currentProductIds": [
+        "gtin:02512766004348",
+        "gtin:07790616000473",
+        "gtin:08011940100011"
+      ],
+      "kind": "group-replacement",
+      "reason": "Renovación confirmada del surtido de quesos",
+      "comparisonBasis": "3 variedades anteriores frente a 3 actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "rollos-de-cocina",
+      "previousProductIds": [
+        "gtin:07790250056881"
+      ],
+      "currentProductIds": [
+        "gtin:07791828900056"
+      ],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de rollos de cocina",
+      "comparisonBasis": "2 paquetes de 6,33 m² anteriores frente a 1 de 11,79 m² actual",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "milanesas-vegetales",
+      "previousProductIds": [
+        "gtin:07790070036438",
+        "gtin:07790670053361"
+      ],
+      "currentProductIds": [
+        "gtin:07798259439681"
+      ],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de milanesas vegetales",
+      "comparisonBasis": "900 gramos anteriores frente a 280 gramos actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "arvejas",
+      "previousProductIds": [
+        "gtin:07790070036414"
+      ],
+      "currentProductIds": [
+        "gtin:07790670052609"
+      ],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de arvejas",
+      "comparisonBasis": "600 gramos anteriores frente a 350 gramos actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "fideos-secos",
+      "previousProductIds": [
+        "gtin:07790070100337",
+        "gtin:07790070100344",
+        "gtin:08008857112244"
+      ],
+      "currentProductIds": [
+        "gtin:08008857112190",
+        "gtin:08008857112657"
+      ],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de fideos secos",
+      "comparisonBasis": "3 paquetes de 500 gramos anteriores frente a 2 actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "leche",
+      "previousProductIds": [
+        "gtin:02800000798505"
+      ],
+      "currentProductIds": [
+        "gtin:07790742192301",
+        "gtin:07798338291803"
+      ],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de leche entera por leche entera y descremada proteica",
+      "comparisonBasis": "6 litros anteriores frente a 3 litros actuales (1 de entera y 2 de proteica)",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "snacks-salados",
+      "previousProductIds": [
+        "gtin:07794520869812",
+        "gtin:07794520869324",
+        "gtin:07790538010437"
+      ],
+      "currentProductIds": [
+        "gtin:07790310985359"
+      ],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de snacks salados con menor volumen",
+      "comparisonBasis": "340 gramos anteriores frente a 43 gramos actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "alfajores",
+      "previousProductIds": [
+        "gtin:07791672002005"
+      ],
+      "currentProductIds": [
+        "gtin:07790040143630"
+      ],
+      "kind": "equivalent",
+      "reason": "Cambio confirmado de marca y formato de alfajores",
+      "comparisonBasis": "150 gramos anteriores frente a 244,2 gramos actuales",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "galletitas-saladas-y-tostadas",
+      "previousProductIds": [
+        "gtin:07792180136336",
+        "gtin:07790040143005",
+        "gtin:00617308824117"
+      ],
+      "currentProductIds": [
+        "gtin:07790071070516"
+      ],
+      "kind": "group-replacement",
+      "reason": "Reposición confirmada de galletitas saladas por tostadas",
+      "comparisonBasis": "671 gramos anteriores frente a 200 gramos actuales",
+      "confidence": "confirmed"
+    }
+  ]
+}

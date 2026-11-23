@@ -20,9 +20,23 @@
     {
       "nominalDate": "2026-09-11",
       "effectiveDate": "2026-09-11",
-      "rateCentsPerUsd": 153790,
-      "sourceReference": "42d8e82fc4e6d12c62fd317be324d7dcfe9ed136",
-      "fetchedAt": "2026-09-12"
+      "rateCentsPerUsd": 153990,
+      "sourceReference": "5d9fb97f07a67093a2cc32d61807367022684494",
+      "fetchedAt": "2026-11-23"
+    },
+    {
+      "nominalDate": "2026-10-17",
+      "effectiveDate": "2026-10-16",
+      "rateCentsPerUsd": 154250,
+      "sourceReference": "ca2b59950f15afefce73fc3fa9d097eef4fd7d1f",
+      "fetchedAt": "2026-11-23"
+    },
+    {
+      "nominalDate": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "rateCentsPerUsd": 174310,
+      "sourceReference": "599391456bc5a9c9b7c8cfc22509b213d6919185",
+      "fetchedAt": "2026-11-23"
     }
   ]
 }
